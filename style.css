@@ -18,7 +18,7 @@
 .menu{
     position:relative ;
     display: flex;
-    top: -50px;
+    top: -30px;
     justify-content: end;
     flex-direction: row;
 }
@@ -57,10 +57,11 @@
 #projects{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    overflow:auto;
 }
 #projects > div{
     border: 1px black solid;
     margin:5%;
     padding: 10px;
+    min-width: 130px; 
 }
