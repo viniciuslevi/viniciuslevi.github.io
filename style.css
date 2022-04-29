@@ -41,7 +41,7 @@
     display:grid;
     gap: 10vh 7vw;
     grid-template-columns: auto auto;
-    background-image: url("/_imagens/section-background.jpg");
+    background-image: url("/imagens/section-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     
