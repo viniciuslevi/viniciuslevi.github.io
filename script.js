@@ -34,7 +34,7 @@ function handleContact(e) {
   var name = document.getElementById('name').value || '';
   var email = document.getElementById('email').value || '';
   var message = document.getElementById('message').value || '';
-  var to = 'vinicius.levi@example.com'; // substitua pelo seu e-mail real
+  var to = 'viniciuslevidev@gmail.com'; // substitua pelo seu e-mail real
   var subject = encodeURIComponent('Contato via site — ' + name);
   var body = encodeURIComponent('Nome: ' + name + '\nEmail: ' + email + '\n\n' + message);
   window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
