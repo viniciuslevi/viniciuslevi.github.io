@@ -1,67 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
-#cabecalho{
-    margin: -10px -10px 0px -10px;
-    color:white;
-    background-color: rgb(51, 51, 51);
-    padding: 1%;
-    border-radius: 10px;
-    height: 12vh;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
 }
-#cabecalho > div{
-    margin-top: -20px;
+
+header.hero {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
 }
-#logo{
-    font-family: 'Water Brush', cursive;
-    font-size: 40px;
+
+.hero-content h1 {
+    font-size: 2.5rem;
 }
-.menu{
-    position:relative ;
+.hero-content .highlight {
+    color: #ffca28;
+}
+.hero-content p {
+    max-width: 600px;
+    margin: auto;
+}
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.social-links a:hover {
+    color: #ffca28;
+}
+
+section {
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skills-grid {
     display: flex;
-    top: -30px;
-    justify-content: end;
-    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    font-size: 2rem;
 }
-.hyperlink-menu{
-    margin-left:5%;
-    text-decoration:none;
-    color:white;
-    padding: 1%;
+
+.projects .project-card {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-.hyperlink-menu:hover{
-    color:white;
-    background-color:rgb(165, 165, 165);
-    border-radius: 5px;
-    transition:1s;
+.project-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #1976d2;
 }
-#services{
-    height:50vh;
-    margin: -10px -10px 0px -10px;
-    padding: 15vh;
-    display:grid;
-    gap: 10vh 7vw;
-    grid-template-columns: auto auto;
-    background-image: url("/imagens/section-background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    font-family:'Water Brush', cursive;
-    font-size:130%;
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-#services > h3{
-    position: absolute;
-    top: 50px;
-    color:white;
-    text-align:center;
-}
-#projects{
-    display:flex;
-    flex-direction: row;
-    overflow:auto;
-}
-#projects > div{
-    border: 1px black solid;
-    margin:5%;
+.contact input, .contact textarea {
     padding: 10px;
-    min-width: 130px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact button {
+    padding: 10px;
+    border: none;
+    background: #1976d2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact button:hover {
+    background: #0d47a1;
+}
+
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
