@@ -1,87 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinícius Levi - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Fonte e ícones -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a2e0b1e1f7.js" crossorigin="anonymous"></script>
-    <!-- AOS (animações ao rolar) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vinícius Levi — Engenharia de Computação</title>
+  <meta name="description" content="Vinícius Levi — Graduando em Engenharia de Computação pela UNIVASF. Backend e software embarcado.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome (icons) -->
+  <script src="https://kit.fontawesome.com/a2e0b1e1f7.js" crossorigin="anonymous"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header / Hero -->
-    <header class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Olá, eu sou <span class="highlight">Vinícius Levi</span></h1>
-            <h2><span id="typed"></span></h2>
-            <p>Graduando em Engenharia de Computação pela UNIVASF | Backend & Software Embarcado</p>
-            <div class="social-links">
-                <a href="https://github.com/viniciuslevi" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/viniciuslevi" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:vinicius.levi@example.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </header>
+  <header class="hero">
+    <div class="container hero-inner" data-aos="fade-up">
+      <div class="hero-left">
+        <h1>Olá — eu sou <span class="name">Vinícius Levi</span></h1>
+        <h2 class="typed-line"><span id="typed"></span></h2>
+        <p class="lead">Graduando em Engenharia de Computação — UNIVASF. Trabalho com Backend e Software Embarcado.</p>
 
-    <!-- Sobre Mim -->
-    <section class="about" data-aos="fade-right">
-        <h2>Sobre Mim</h2>
-        <p>
-            Sou apaixonado por tecnologia e desenvolvimento de soluções que unem performance e eficiência. 
-            Tenho experiência com linguagens como C, C++, Java, Python e frameworks como FastAPI, Django e Spring Boot.
-            Também trabalho com VHDL e desenvolvimento embarcado.
-        </p>
+        <div class="hero-cta">
+          <a class="btn" href="https://github.com/viniciuslevi" target="_blank" rel="noopener">Ver GitHub</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/viniciuslevi" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-email" href="mailto:vinicius.levi@example.com">Enviar e‑mail</a>
+        </div>
+
+        <div class="social small">
+          <a href="https://github.com/viniciuslevi" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/viniciuslevi" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true" data-aos="fade-left">
+        <!-- Simple avatar / illustration circle -->
+        <div class="avatar">
+          <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar">
+            <rect width="240" height="240" rx="20" fill="#0d47a1"/>
+            <g transform="translate(40,40)" fill="#ffffff">
+              <circle cx="80" cy="40" r="28" opacity="0.95"/>
+              <rect x="24" y="84" width="112" height="64" rx="12" opacity="0.95"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about container" data-aos="fade-right">
+      <h3>Sobre mim</h3>
+      <p>Sou apaixonado por tecnologia e por projetar soluções que unam performance e confiabilidade. Tenho experiência com linguagens como <strong>C, C++, Java e Python</strong> e frameworks como <strong>FastAPI, Django</strong> e <strong>Spring Boot</strong>. Também trabalho com <strong>VHDL</strong> e desenvolvimento embarcado (ESP32).</p>
     </section>
 
-    <!-- Tecnologias -->
-    <section class="skills" data-aos="fade-up">
-        <h2>Tecnologias</h2>
-        <div class="skills-grid">
-            <i class="fab fa-cuttlefish" title="C/C++"></i>
-            <i class="fab fa-java" title="Java"></i>
-            <i class="fab fa-python" title="Python"></i>
-            <i class="fab fa-js" title="JavaScript"></i>
-            <i class="fab fa-html5" title="HTML5"></i>
-            <i class="fab fa-css3-alt" title="CSS3"></i>
-        </div>
+    <section class="skills container" data-aos="fade-up">
+      <h3>Tecnologias</h3>
+      <div class="badges">
+        <span class="badge">C / C++</span>
+        <span class="badge">Java</span>
+        <span class="badge">Python</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">Django</span>
+        <span class="badge">Spring Boot</span>
+        <span class="badge">VHDL</span>
+        <span class="badge">HTML · CSS · JS/TS</span>
+      </div>
     </section>
 
-    <!-- Projetos -->
-    <section class="projects" data-aos="fade-left">
-        <h2>Projetos</h2>
-        <div class="project-card">
-            <h3>Projeto IoT - ESP32 + MQTT</h3>
-            <p>Monitoramento de temperatura em tempo real usando ESP32 e protocolo MQTT.</p>
-            <a href="https://github.com/viniciuslevi/projeto-iot" target="_blank">Ver no GitHub</a>
-        </div>
-        <div class="project-card">
-            <h3>API Rest - Scan.ai</h3>
-            <p>API para gestão de processos industriais, desenvolvida com Spring Boot.</p>
-            <a href="https://github.com/viniciuslevi/scan-ai" target="_blank">Ver no GitHub</a>
-        </div>
+    <section class="projects container" data-aos="fade-left">
+      <h3>Projetos em destaque</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Projeto IoT — ESP32 + MQTT</h4>
+          <p>Monitoramento de temperatura em tempo real com ESP32, MQTT e análise de dados.</p>
+          <a class="card-link" href="https://github.com/viniciuslevi/projeto-iot" target="_blank" rel="noopener">Ver no GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h4>API Rest — Scan.ai</h4>
+          <p>API de gestão para processos industriais, com endpoints para coleta e análise.</p>
+          <a class="card-link" href="https://github.com/viniciuslevi/scan-ai" target="_blank" rel="noopener">Ver no GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h4>Simulações VHDL</h4>
+          <p>Projetos de simulação e testes em VHDL — portas lógicas e processadores simples.</p>
+          <a class="card-link" href="https://github.com/viniciuslevi/vhdl-projects" target="_blank" rel="noopener">Ver no GitHub →</a>
+        </article>
+      </div>
     </section>
 
-    <!-- Contato -->
-    <section class="contact" data-aos="zoom-in">
-        <h2>Contato</h2>
-        <form action="mailto:vinicius.levi@example.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu e-mail" required>
-            <textarea name="message" placeholder="Sua mensagem" required></textarea>
-            <button type="submit">Enviar</button>
+    <section class="contact container" data-aos="zoom-in">
+      <h3>Contato</h3>
+      <p>Prefere enviar uma mensagem direta? Use o e‑mail abaixo ou abra uma issue em algum projeto.</p>
+
+      <div class="contact-row">
+        <div>
+          <p><strong>E‑mail:</strong> <a href="mailto:vinicius.levi@example.com">vinicius.levi@example.com</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/viniciuslevi" target="_blank" rel="noopener">github.com/viniciuslevi</a></p>
+        </div>
+
+        <form class="contact-form" onsubmit="handleContact(event)">
+          <label class="visually-hidden" for="name">Nome</label>
+          <input id="name" name="name" type="text" placeholder="Seu nome" required>
+
+          <label class="visually-hidden" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Seu e‑mail" required>
+
+          <label class="visually-hidden" for="message">Mensagem</label>
+          <textarea id="message" name="message" placeholder="Escreva sua mensagem" rows="4" required></textarea>
+
+          <div style="display:flex;gap:.5rem;align-items:center">
+            <button class="btn" type="submit">Enviar</button>
+            <small class="hint">O formulário abrirá o seu cliente de e‑mail.</small>
+          </div>
         </form>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Vinícius Levi - Todos os direitos reservados</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Vinícius Levi — Graduando em Engenharia de Computação</p>
+      <p class="footer-links">
+        <a href="https://github.com/viniciuslevi" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/viniciuslevi" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
