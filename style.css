@@ -217,7 +217,7 @@ p{margin:0 0 1rem;color:var(--muted)}
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
-  animation: projectsScroll 35s linear infinite;
+  animation: projectsScroll 40s linear infinite;
   width: calc(200% + 1rem);
 }
 
@@ -239,7 +239,8 @@ p{margin:0 0 1rem;color:var(--muted)}
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 6px 18px var(--shadow-light);
-  min-width: 280px;
+  min-width: calc(33.333% - 0.67rem);
+  max-width: calc(33.333% - 0.67rem);
   flex-shrink: 0;
 }
 
@@ -267,6 +268,31 @@ p{margin:0 0 1rem;color:var(--muted)}
   
   .card {
     min-width: auto;
+    max-width: 100%;
+  }
+}
+
+/* Medium screens: 2 projects side by side */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .card {
+    min-width: calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+  }
+}
+
+/* Large screens: 3 projects side by side */
+@media (min-width: 1025px) {
+  .card {
+    min-width: calc(33.333% - 0.67rem);
+    max-width: calc(33.333% - 0.67rem);
+  }
+}
+
+/* Extra large screens: could fit 4 projects */
+@media (min-width: 1400px) {
+  .card {
+    min-width: calc(25% - 0.75rem);
+    max-width: calc(25% - 0.75rem);
   }
 }
 
