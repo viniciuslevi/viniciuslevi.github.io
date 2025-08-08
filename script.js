@@ -133,33 +133,13 @@ document.addEventListener('DOMContentLoaded', function() {
   // Enhanced projects carousel interaction
   const projectsGrid = document.querySelector('.projects .grid');
   if (projectsGrid) {
-    // Pause animation when any card is hovered
-    const cards = projectsGrid.querySelectorAll('.card');
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        projectsGrid.style.animationPlayState = 'paused';
-      });
-      
-      card.addEventListener('mouseleave', () => {
-        projectsGrid.style.animationPlayState = 'running';
-      });
-    });
-
-    // Pause animation when section is out of view for performance
-    const projectsSection = document.querySelector('.projects');
-    const projectsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          projectsGrid.style.animationPlayState = 'running';
-        } else {
-          projectsGrid.style.animationPlayState = 'paused';
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    if (projectsSection) {
-      projectsObserver.observe(projectsSection);
-    }
+    // Não há mais animação CSS para pausar; habilitar scroll suave por mouse/trackpad
+    projectsGrid.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        projectsGrid.scrollLeft += e.deltaY;
+        e.preventDefault();
+      }
+    }, { passive: false });
   }
 });
 

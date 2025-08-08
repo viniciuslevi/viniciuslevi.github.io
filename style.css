@@ -217,21 +217,11 @@ p{margin:0 0 1rem;color:var(--muted)}
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
-  animation: projectsScroll 40s linear infinite;
-  width: calc(200% + 1rem);
-}
-
-@keyframes projectsScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.grid:hover {
-  animation-play-state: paused;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  animation: none; /* remove animação infinita */
 }
 
 .card {
@@ -239,61 +229,23 @@ p{margin:0 0 1rem;color:var(--muted)}
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 6px 18px var(--shadow-light);
-  min-width: calc(33.333% - 0.67rem);
-  max-width: calc(33.333% - 0.67rem);
   flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
-.card h4{margin:.2rem 0 .5rem;color:var(--text-primary)}
-.card-link{display:inline-block;margin-top:.5rem;color:var(--accent-2);font-weight:600;text-decoration:none}
-.card-link.private{
-  color:var(--muted);
-  font-style:italic;
-  cursor:default;
-  position:relative;
-}
-.card-link.private::before{
-  content:"🔒 ";
-  font-style:normal;
-}
-
-/* Responsive: disable animation on small screens */
-@media (max-width: 768px) {
-  .grid {
-    animation: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-  
-  .card {
-    min-width: auto;
-    max-width: 100%;
-  }
-}
-
-/* Medium screens: 2 projects side by side */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .card {
-    min-width: calc(50% - 0.5rem);
-    max-width: calc(50% - 0.5rem);
-  }
-}
-
-/* Large screens: 3 projects side by side */
-@media (min-width: 1025px) {
-  .card {
-    min-width: calc(33.333% - 0.67rem);
-    max-width: calc(33.333% - 0.67rem);
-  }
-}
-
-/* Extra large screens: could fit 4 projects */
+/* Larguras responsivas dos cards */
 @media (min-width: 1400px) {
-  .card {
-    min-width: calc(25% - 0.75rem);
-    max-width: calc(25% - 0.75rem);
-  }
+  .card { min-width: calc(25% - 0.75rem); max-width: calc(25% - 0.75rem); }
+}
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .card { min-width: calc(33.333% - 0.67rem); max-width: calc(33.333% - 0.67rem); }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card { min-width: calc(50% - 0.5rem); max-width: calc(50% - 0.5rem); }
+}
+@media (max-width: 768px) {
+  .grid { display: grid; grid-template-columns: 1fr; overflow-x: visible; }
+  .card { min-width: 100%; max-width: 100%; }
 }
 
 /* contact */
